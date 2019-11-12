@@ -1,0 +1,47 @@
+
+<div class="w-100 justify-content-center mt-1">
+  <table class="w-100">
+    <thead>
+      <tr>
+        <td></td>
+        <td colspan="3" class="text-center" *ngFor="let day of days">{{day}}</td>
+      </tr>
+      <tr>
+        <td></td>
+        <ng-container *ngFor="let day of days">
+          <td colspan="1" class="text-center" *ngFor="let room of rooms">{{room}}</td>
+        </ng-container>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr *ngFor="let hour of hours">
+        <td [id]="'hourCell'" class="pt-5 pb-5">{{hour}}</td>
+        <ng-container *ngFor="let day of days">
+          <td class="text-center" colspan="1" *ngFor="let room of rooms">
+            {{instructors[0].name}}
+          </td>
+        </ng-container>
+      </tr>
+    </tbody>
+  </table>
+<!--  <ul  class="list-group list-group-horizontal">
+    <li *ngFor="let day of days" class="list-group-item list-group-item-dark text-center">{{day}}</li>
+  </ul>
+ <ul class="list-group list-group-horizontal">
+    <li *ngFor="let room of rooms" class="list-group-item list-group-item-dark text-center">{{room}}</li>
+  </ul>-->
+
+<!--
+
+  <ul class="list-group">
+    <li *ngFor="let day of days" class="list-group-item">{{day}}</li>
+  </ul>
+
+
+-->
+
+</div>
+
+
+
