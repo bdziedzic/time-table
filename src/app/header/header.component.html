@@ -4,20 +4,21 @@
     <thead>
       <tr>
         <td></td>
-        <td colspan="3" class="text-center" *ngFor="let day of days">{{day}}</td>
+          <ng-container *ngFor="let hour of hours">
+            <td colspan="1" class="text-center" *ngFor="let room of rooms">{{room}}</td>
+          </ng-container>
       </tr>
       <tr>
         <td></td>
-        <ng-container *ngFor="let day of days">
-          <td colspan="1" class="text-center" *ngFor="let room of rooms">{{room}}</td>
-        </ng-container>
+        <td colspan="3" class="text-center" *ngFor="let hour of hours">{{hour}}</td>
       </tr>
+
     </thead>
 
     <tbody>
-      <tr *ngFor="let hour of hours">
-        <td [id]="'hourCell'" class="pt-5 pb-5">{{hour}}</td>
-        <ng-container *ngFor="let day of days">
+      <tr *ngFor="let day of days">
+        <td [id]="'dayCell'" class="pt-5 pb-5">{{day}}</td>
+        <ng-container *ngFor="let hour of hours">
           <td class="text-center" colspan="1" *ngFor="let room of rooms">
             {{instructors[0].name}}
           </td>

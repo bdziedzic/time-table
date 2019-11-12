@@ -3,3 +3,13 @@ tbody{
   border: darkblue solid 1px;
 }
 
+#dayCell{
+
+  transform: rotate(-90deg);
+  transform-origin: center;
+
+
+}
+
+
+
